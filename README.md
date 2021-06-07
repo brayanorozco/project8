@@ -7,7 +7,8 @@ Voici les étapes :
 2. Tapez `use projet10` puis appuyez sur entrer.
 2. Tapez `db.users.insert({email: "myEmail", password: "myPwd"})` en remplaçant myEmail par l'email de votre choix ainsi que myPwd par le mot de passe que vous souhaitez puis appuyez sur entrer.
 
-____________________________________________________________id
+____________________________________________________________
+id
 Regarding ticket management, we’d like to have a sort of administrator
 user who will be able to assign a ticket to other users.
 
