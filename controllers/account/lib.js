@@ -11,7 +11,8 @@ function signup(req, res) {
     } else {
         var user = {
             email: req.body.email,
-            password: req.body.password
+            password: req.body.password,
+            role: "basic"
         }
         var findUser = new Promise(function (resolve, reject) {
             User.findOne({
