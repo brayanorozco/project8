@@ -93,8 +93,10 @@ function edit(req, res) {
 			})
 		})
 
+		console.log(req.session);
+
 		findTicket.then(function (ticket) {
-			res.status(200).render('ticket/edit', {title: `Modifier ticket n°${ticket._id}`, ticket});
+			res.status(200).render('ticket/edit', {title: `Modifier ticket n°${ticket._id}`, ticket, role: req.session.role });
 		}, function (error) {
 			switch (error) {
 				case 500:

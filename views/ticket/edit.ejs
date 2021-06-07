@@ -7,6 +7,7 @@
             <h3>Editer Ticket n°<%= ticket._id %></h3>
             <form method="POST" action="/ticket/<%= ticket._id %>/update">
                 <input type="hidden" value="<%= ticket._id %>">
+                <h1><%= role %></h1>
                 <div class="form-group">
                     <label>Titre: </label>
                     <input type="text" class="form-control" name="title" value="<%= ticket.title %>" />

@@ -90,6 +90,7 @@ function login(req, res) {
             else {
                 if (user.authenticate(req.body.password)) {
                     req.session.token = user.getToken();
+                    req.session.role = user.getRole();
                     res.redirect('../../ticket/');
                 }
                 else{
