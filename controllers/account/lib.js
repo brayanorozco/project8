@@ -3,9 +3,10 @@ const User = require('../../schema/schemaUser.js');
 function signup(req, res) {
     if (!req.body.email || !req.body.password) {
         //Le cas où l'email ou bien le password ne serait pas soumit ou nul
+        // The case when the email or password have not been submitted or are null
         console.log(req.body);
         res.status(400).json({
-            "text": "Requête invalide"
+            "text": "Invalid request"
         })
     } else {
         var user = {
