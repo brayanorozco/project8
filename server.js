@@ -7,7 +7,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
 //Connexion à la base de donnée
-mongoose.connect('mongodb://localhost/projet10').then(() => {
+mongoose.connect('mongodb://localhost/projet10', {useNewUrlParser: true, useCreateIndex: true}).then(() => {
 	console.log('Connected to mongoDB')
 }).catch(e => {
 	console.log('Error while DB connecting');
@@ -55,5 +55,5 @@ var ticketRouter = require(__dirname + '/routes/ticketController');
 app.use('/ticket', ticketRouter);
 
 //Définition et mise en place du port d'écoute
-var port = 8000;
-app.listen(port, () => console.log(`Listening on port ${port}`));
+var port = 8080;
+app.listen(port, () => console.log(`Listening on port http://localhost:${port}`));
